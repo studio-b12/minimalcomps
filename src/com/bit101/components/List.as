@@ -438,6 +438,8 @@ package com.bit101.components
 		{
 			_items = value;
 			invalidate();
+			 makeListItems();
+			 invalidate();
 		}
 		public function get items():Array
 		{
