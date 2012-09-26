@@ -114,7 +114,6 @@ package com.bit101.components
             numItems = Math.max(numItems, 1);
 			for(var i:int = 0; i < numItems; i++)
 			{
-
 				item = new _listItemClass(_itemHolder, 0, i * _listItemHeight);
 				item.setSize(width, _listItemHeight);
 				item.defaultColor = _defaultColor;
@@ -198,7 +197,11 @@ package com.bit101.components
 		{
 			super.draw();
 			
+			var prevIndex:int = _selectedIndex;
 			_selectedIndex = Math.min(_selectedIndex, _items.length - 1);
+			if (prevIndex != _selectedIndex) {
+				dispatchEvent(new Event(Event.SELECT));
+			}
 
 
 			// panel
