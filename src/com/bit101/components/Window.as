@@ -331,7 +331,7 @@ package com.bit101.components
 //			_panel.visible = !_minimized;
 			if(_minimized)
 			{
-				if(contains(_panel)) removeChild(_panel);
+				if(contains(_panel)) super.removeChild(_panel);
 				_minimizeButton.rotation = -90;
 			}
 			else
